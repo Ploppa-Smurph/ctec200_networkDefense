@@ -138,15 +138,200 @@ crawl & scrape useful information in preperation for an attack.
 <h3>Lab: Navigating Open-Source Intelligence Tools</h3>
 
 <h2>04: Evaluating Human and Physcial Vulnerabilities</h2>
-<h3>04A</h3>
-<h3>04B</h3>
-<h3>04C</h3>
+<h3>04A Exploit the Human Psyche</h3>
+<h4>USING SOCIAL ENGINEERING</h4>
+<b>Pretexting</b> - using half-truth / falsehood to get others to act against their better judgement
+
+<b>Elicitation</b> - acquiring data from target in order to initiate attack
+    <i>Request</i>
+    <i>Interrogation</i>
+    <i>Surveys</i>
+    <b>Observation</b>
+
+<b>BEC (Business Email Compromise)</b> - 
+
+<b>Hoax</b> - 
+
+<h4>PHISHING, PHARMING, and BAITING THE VICTIM</h4>
+<b>Phishing</b> - 
+
+<b>Social Engineering Toolkit (SET)</b>
+
+<b>Pharming</b> - 
+
+<b>Baiting</b>
+
+<b>Dispatching Email</b>
+    <i><b>Spam</b></i>
+    <i><b>Malvertising</b></i>
+    <i><b>Spear phishing</b></i> - targets specific user
+
+<b>Targeting the Victim Using Text or VoIP</b>
+    <i><b>Vishing</b></i>
+    <i><b>SPIT (Spam over Internet Telephony)</b></i>
+    <i><b>SPIM (Instant Messaging spam)</b></i>
+    <i><b>SMiShing (SMS spam)</b></i>
+
+<b>Baiting and Redirecting the Victim</b>
+    <i><b>USB Drop Key</b></i> - drop thumb drive in parking lot waiting for someone to plug into computer
+    <i><b>Watering Hole Attacks</b></i> 
+    <i><b>Supply Chain Attack</b></i>
+    <i><b>Downstream Liability</b></i>
+    <i><b>Typosquatting (URL Hijacking)</b></i>
+
+<h4>EMPLOYING CHARM, POWER, and INFLUENCE</h4>
+<b>Impersonating and Imitating</b>
+    <b><i>Impersonation</i></b>
+
+<b>Complying and Conforming</b>
+    <b><i>Social Proof</i></b>
+
+<h3>04B Summarize Physical Attacks</h3>
+<h4>EXPLOITING PHYSICAL SECURITY</h4>  
+
+<h4>CIRCUMVENTING SECURITY</h4>
+<b>Scaling Fences</b>
+    <b><i>Peremiter Security</i></b>
+
+<b>Detecting Motion</b>
+    <b><i>Motion Detection</i></b>
+    <b><i>Mantrap</i></b>
+
+<h4>CLONING A BADGE</h4>
+<b>RFID (Radio-Frequency Identification)</b>
+<b>Proximity Reader</b>
+<b>NFC (Near-Field Communication)</b>
+
+<b>Badge Cloning</b>
+
+<h4>GAINING ACCESS</h4>
+<b>Bypassing Locks</b>
+<b>Lock Picking</b>
+<b>Tailgating and Piggybacking</b>
+    <i><b>Tailgating</b></i> - covert, malicious actor slips in behind authorized employee
+
+    <i><b>Piggybacking</b></i> - authorized employee knows they are letting person in, but does it to be nice
+
+<h4>SEARCHING FOR INFORMATION</h4>
+<b>Rummaging the Trash</b>
+    <b><i>Dumpster Diving</i></b> -- documents, calendars, storage devices
+
+<b>Observing Employees</b>
+    <b><i>Shoulder Surfing</i></b> -- 
+
+<h3>04C Use Tools to Launch a Social Engineering Attack</h3>
+<h4>DISCOVERING THE SET</h4>
+<b>SET</b> - python tool to do social engineering
+
+<h4>SPOOFING A CALL</h4>
+<b>Plain Old Telephone System (POTS)</b>
+
 <h3>Lab: Understanding Social Engineering Toolkit (SET)</h3>
 
 <h2>05: Preparing the Vulnerability Scan</h2>
-<h3>05A</h3>
-<h3>05B</h3>
-<h3>05C</h3>
+<h3>05A Plan the Vulnerability Scan</h3>
+<h4>UNDERSTANDING VULNERABILITIES</h4>
+<h4>MOVING THROUGH THE LIFE OF A VULNERABILITY</h4>
+<b>Lifecycle of a Vulnerability</b>: 
+    <i>01) Discover</i>
+    <i>02) Coordinate</i>
+    <i>03) Mitigate</i>
+    <i>04) Manage</i>
+    <i>05) Document</i>
+
+<b>Exploiting the Unknown</b>
+    <i>Risk Gap</i>
+
+<b>Reducing Risks to Data</b>
+    <i>Exposing sensitive data</i>
+    <i>Data modification</i>
+
+<h4>Performing Active Reconnaissance</h4>
+<b>Grabbing Banners</b>
+    <i><b>Banner Grabbing</b></i>
+    <i>wget</i> - 
+    <i>netcat (nc)</i>
+    <i>nmap</i>
+    <i>curl</i>
+
+<b>Mapping the Network</b>
+    <b><i>Topology</i></b>
+
+<h4>RUNNING SCANS</h4>
+    <b>OpenVAS (Open Vulnerability Assessment Scanner)</b>
+
+<b>Scanning Considerations</b>:
+    <i><b>Time to run scans</b></i>
+    <i><b>Bandwidth limitations</b></i>
+    <i><b>Fragile systems</b></i>
+    <i><b>Query throttling</b></i>
+
+<b>Types of Scans</b>:
+    <i><b>Web Application Scans</b></i>
+    <i><b>Network Scans</b></i>
+    <i><b>Application Scans</b></i>
+    <i><b>Compliance Scans</b></i>
+
+<h3>05B Detect Defenses</h3>
+<h4>IDENTIFYING LOAD BALANCERS</h4>
+<b>Load Balancing Detector (LBD)</b> - app in Kali
+
+<h4>RECOGNIZING FIREWALLS</h4>
+<b>WAF (Web Application Firewall)</b> 
+    <i>- WAF gives away it's existence by adding personal cookie in HTTP packet</i>
+    <i>- Can change Header (Header Alteration) to confuse attacker</i>
+    <i>- Some WAF ID themselves by response</i> - ex: 'myDefender blocked your request'
+
+<b><i>Packets might pass through a firewall for the following reasons</i></b>:
+    <i>- packet matches a permit rule</i>
+    <i>- packed DOES NOT match a deny rule</i>
+
+<b>Access Control List (ACL)</b>
+
+<h4>AVOIDING ANTIVIRUS</h4>
+    <i>- Create metamorphic virus that transforms</i>
+    <i>- Obfuscate known signature</i> - tools such as: ObfuscatedEmpire (branch of Empire)
+    <i>- Use specialized tools or payloads (ie: 'fileless malware')</i>
+
+<b>** Use Metasploit, along with SET (Social Engineering Toolkit) **</b> - can create malicious payload such as virus, worm, or trojan and embed in PDF
+
+<h3>05C Utilize Scanning Tools</h3>
+<h4>ANALYZING THE ATTACK SURFACE</h4>
+
+<h4>CRAFTING PACKETS</h4>
+<b>Craft Packets in 4 Stages</b>:
+<i>01) Assemble</i>
+<i>02) Edit</i>
+<i>03) Play</i>
+<i>04) Decode</i>
+
+<b>Popular Tools</b>:
+    <i>- Ostinato</i>
+    <i>- Libcrafter</i>
+    <i>- Yersina</i>
+    <i>- packETH</i>
+    <i>- Colasoft Packet Builder</i>
+    <i>- Bit-Twist</i>
+    <i>- Scapy</i>
+    <i>- hping/Hping3</i>
+
+<h4>EVALUATING WEB TOOLS</h4>
+web servers are public-facing
+    <i>- Scan web servers on TCP 80 or 443 for server-specific vulnerabilities</i>
+    <i>- Scan for servers running on non-standard ports</i>
+    <i>- Scan web-applications for SQL-injection-related vulnerabilities</i>
+    <i>- Scan SQL server directly on it's port (TCP 1433 usually)</i>
+    <i>- Scan running apps for vulnerabilities NOT related to SQL</i>
+    
+<b>SQLmap</b> - opensource database scanning tool
+
+<b>Exploit Encryption Vulnerability</b>:
+    <b><i>- Logjam vulnerability</i></b> - weaken encryption complexity
+    <b><i>Freak vulnerability</i></b> - attack RSA-export key and allows malicious actor to decrypt communication stream
+    <b><i>Poodle vulnerability</i></b> - alters the way SSL 3.0 handles block cipher mode padding to be able to select content within SSL session
+
+<b>Nikto</b> - open-source web server scanner, in Kali
+
 <h3>Lab: Understanding Spear Phishing and Credentials Attacks</h3>
 
 <h2>Exam 01: Lessons 01 - 05</h2>
