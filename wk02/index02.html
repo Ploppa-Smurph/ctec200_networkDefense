@@ -237,7 +237,14 @@ crawl & scrape useful information in preperation for an attack.
 <b>Plain Old Telephone System (POTS)</b>
 
 <h3>Lab: Understanding Social Engineering Toolkit (SET)</h3>
-- 
+- setoolkit  = social-engineering toolkit; good for wireless, spear-phishing, arduino-based, and powershell 
+Under 'Social Engineering Attacks'
+- 1- Spear-phishing attacks
+- 2- Web-jacking attack
+- 3- Infectious Media Generator
+- 4- Create a Payload and Listener
+- 5- Mass Mailer Attack 
+- 6- ...
 
 <h2>05: Preparing the Vulnerability Scan</h2>
 <h3>05A Plan the Vulnerability Scan</h3>
@@ -344,10 +351,18 @@ web servers are public-facing
 <b>Nikto</b> - open-source web server scanner, in Kali
 
 <h3>Lab: Understanding Spear Phishing and Credentials Attacks</h3>
+- If the spear phishing attack from the last section was real, and our target logged into the cloned website we would have captured their credentials.
+
+There are many things a penetration tester can do to improve the odds this would work. They would want to make sure the domain hosting the cloned website was potential close in spelling to the original site. Using just as IP address like we did in this lab can work, but more and more people are being trained to be suspcious of this type of URL.
+
+A pen tester might also worked to make the HTML email look like something that was real and coming from the target's systems. Most of you have probably received a phishing email supposedly coming from Netflix or your Bank and they usually look almost exact like real messages from these sites. This is to improve the rate of getting people to fall for the deception.
+
+Another important note. In this lab we set up the credential harvester and then shut it down before moving on to making the spear phishing email. In a real campaign, we would obviously leave the harvester running and simply open another Terminal to conduct our phishing attack.
+
+It should also be noted that most of the time you would NOT do this from your own machine. You wouldn't want the IP address to trace back to you. Most malicious attackers take over other servers to host their cloned sites and to send thier email. For a white hat pen tester, we might use resources in the Cloud that we have spun up for this purpose.
 
 <h2>Exam 01: Lessons 01 - 05</h2>
-
-
+  -- there was nothing at the link and the exam says it was worth 0 points
 
 </pre>
 </body>
