@@ -9,9 +9,132 @@
 <pre>
 <h1>CTEC 200 Network Defense wk02 Lessons 03: Footprinting and Gathering Intelligence; 04: Evaluating Human and Physical Vulnerabilities; and 05: Preparing the Vulnerability Scan</h1>
 <h2>03: Footprinting and Gathering Intelligence</h2>
-<h3>03A</h3>
-<h3>03B</h3>
-<h3>03C</h3>
+<h3>03A: Discover the Target</h3>
+<b>Passive Reconissance</b> - gathering the first steps of information without interacting with a server. handsoff
+    - using dns records and whois. 
+    - find social media patterns.
+    - find company server naming standards: ex: jswalley@ vs walleyjs@.... however accounts are named
+    - use shodan (sp?) - has list of default password for their IT device; also has vulnerable legacy database list
+        -- 
+    - spiderfoot -- good tool 
+    - montego -- good application 
+    - study metadata from downloaded files from companies
+        -- you can pull names from financial reports that are online, or such
+            - ex: barry johnson's name from financing is on a report, you can then name drop
+    - nmap (sense scan) -- tries to stay passive; nmap is mostly aggressive, though
+    - look for 'revocation information' on 3rd party sites to remain passive
+<h4>GATHERING INFORMATION</h4>
+<b>Providing Insight on the Target</b>
+<b>Leveraging the Intel</b>
+<h4>IDENTIFYING ORGANIZATIONAL CONTACTS</h4>
+<b>Scraping Social Media</b>
+<b>Scouring Job Listings</b>
+<h4>EXAMINING DNS INFORMATION</h4>
+    <b>MX (Mail Exchange)</b> - Mail Server
+    <b>NS (Nameserver)</b> - DNS 
+    <b>TXT (Text)</b> - provides information about resournce such as server or network in human readable form
+    <b>SRV (Service)</b> - provides host and port information on services such as VoIP (Voice over IP) or IM (Instant Messagning)
+
+<b>nslookup</b> - command-line tool to query domain and specify various record types
+
+<b>dig</b> - perform reverse lookup to match IP address to domain name
+
+<b>whois</b> - can find:
+    -- name of domain registrant
+    -- name & mailing address of registrant organization
+    -- email address and phone number of the registrant
+    -- previous information regarding administrative and technical contacts
+    -- identifying information about the domain's registrar
+    -- status of domain, including client and server codes that concern renewal, deletion, transfer, and related information
+    -- name server the domain uses
+<h3>03B Gather Essential Data</h3>
+<h4>USING PUBLIC SOURCE-CODE REPOSITORIES</h4>
+    - GitHub
+    - Bitbucket
+    - SourceForge
+<h4>OPTIMIZING SEARCH RESULTS</h4>
+    <i>site</i> - 'site:comptia.org report' -- search comptia's site for results including 'report'
+
+    <i>link</i> - 'link:comptia.org report'  -- search any pages that link to comptia's site that have report on the page
+
+    <i>filetype</i> - 'filetype:pdf report' -- search PDFs including text report
+
+    <i>inurl</i> - 'inurl:Certification report' -- reports on any pages whose URLs include test "Certification"
+<h4>UNEARTHING ARCHIVED WEBSITES</h4>
+    use <i>cache</i> search: <i>'cache:https://comptia.org'</i> will give the cached site
+
+    <i><b>Wayback Machine</b></i> - website that has archive of sites going back decades
+<h4>SEARCHING FOR IMAGES</h4>
+<b>Reverse Image Search</b> - TinEye, Google, Yandex, Bing
+<h3>03C Compile Website Information</h3>
+crawl & scrape useful information in preperation for an attack. 
+-- look for flaws in SSL and TLS
+<b>1) Passive recon</b>: check have I been pwned, other sites for corporate accounts that could be a way in
+
+<b>2) Ennumerate</b>: find out what services the organization has running
+
+<b>3) Find 'robots.txt' file</b>: can have list of folders organization does NOT want indexed, those are sometimes folders hackers would be interested in
+
+<b>4) Look at sourcecode</b>:  for 3rd party library vulnerabilities, or insecure coding
+
+<b>5) Check API configuration</b>: check for wrong APIs, typosquatting, chaining exploits
+
+<b>6) Capture API results</b>: use 'Burpsuite' and capture data
+
+<b>7) Know usecase for tools</b>: develop a library of your favorite tools
+
+<b>8) Cover your tracks</b>: VPN, use VMs, change VM locations from east to west, different countries
+
+<b>9) Worry about the corporation server logfiles</b>: obfuscate attacks as much as possible or IPS/IDS, event logs, SIEM, and other tools will show that someone is snooping
+
+<b>10) Packet Crafting</b>: python scripting, 'Scapy' is a tool that is often used
+
+<h4>ENUMERATING THE TARGET WEBSITE</h4>
+<b>Investigating the Website</b>
+
+<b>Extending Your Reach</b>
+
+<b>Evaluting the 'robots.txt' File</b>
+
+<h4>RECOGNIZING CERTIFICATE FLAWS</h4>
+<b>Discovering Certificate Details</b> 
+    <i><b>SAN (Subject Alternative Name)</b></i> 
+
+<b>Revoking the Certificate</b>
+    <i><b>CRL (Certificate Revocation List)</b></i>
+
+    <i><b>OCSP (Online Certificate Status Protocol)</b></i>
+
+<b>Stapling the Certificate</b>
+    <i>01) Web server goes to OCSP server to check certificate validity
+       02) Web server sends validated certificate to client </i>
+<h3>03D Discover Open-Source Intelligence Tools</h3>
+<h4>UNEARTHING OSINT TOOLS</h4>
+<b>Metagoofil</b>
+<b>Shodan</b>
+<b>Maltego</b>
+<b>Recon-ng</b>
+
+<h4>SEARCHING METADATA</h4>
+<b>Using Metagoofil</b>
+    <i>-d site</i>:   scan documents on website
+    <i>-t pdf</i>:    scan for PDF documents
+    <i>-l 75</i>:     search for 75 documents
+    <i>-n 25</i>:     download 25 files
+    <i>-o comptiapdf</i>: save download to 'comptiapdf' directory 
+
+<b>Fingerprinting with FOCA</b>
+    <i>FOCA</i> - GUI OSINT tool used to discover metadata hidden within documents
+
+<h4>RESEARCHING ORGANIZATIONA INFORMATION</h4>
+<b>Collecting Data with 'theHarvester'</b>
+
+<b>Gathering with Recon-ng</b>
+
+<h4>Transforming Data with Maltego</h4>
+
+<h4>Searching with Shodan</h4>
+
 <h3>Lab: Navigating Open-Source Intelligence Tools</h3>
 
 <h2>04: Evaluating Human and Physcial Vulnerabilities</h2>
