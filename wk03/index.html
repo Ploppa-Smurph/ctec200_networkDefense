@@ -116,22 +116,90 @@
 
 <h3>07B - Enumerate Network Hosts</h3>
 <h4>DETECTING INTERESTING HOSTS</h4>
-<b>Ping Scans</b>
+<b>Ping Scans</b> - ping range of IP addresses to learn which machines are responding
 
-<b>TCP Scans</b>
+<b>TCP Scans</b> - check for open / listening TCP ports to determine services used
 
-<b>OS Footprinting</b>
+<b>OS Footprinting</b> - IDs operating system on system
 
+<b>Nmap defaults</b>: 
+    - <i>TCP SYN</i> - packet to port 443
+    - <i>TCP ACK</i> - packet to port 80
+    - <i>ICMP type 8</i> - echo request
+    - <i>ICMP type 13</i> - timestamp request
+    - <i>ARP</i> - request to obtain MAC address details
 
-<h3>07C - </h3>
-<h3>Lab 07:</h3>
+<i><b>If firewall blocks ICMP pings try</b></i>:
+    - <i>TCP ACK Ping</i> - <b><i>-PA ((portlist)</i></b> -- set ACK (acknowledgement) flag in TCP header
+    - <i>UDP Ping</i> - <b><i>-PU (portlist)</i></b> -- scan uses User Datagram Protocol UDP
+    - <i>SCTP Initiation Ping</i> - <b><i>-sY (portlist)</i></b> -- scan uses SCTP (Stream Control Transmission Protocol) [alternate to TCP or UDP]
+    - <i>TCP SYN Ping</i> <b><i>-PS (target)</i></b> -- sends empty TCP packet with SYN flag set to port specified
+
+<b>4 Nmap Port States</b>:
+    - OPEN       - port is open and responding to probes
+    - CLOSED     - port is not responding to probes
+    - FILTERED   - port is blocked by firewall
+    - UNFILTERED - port is accessible; however Nmap is unable to determine if port is OPEN or CLOSED   
+
+<b>Host Discovery Phase Options</b>:
+    - '-Pn' = skip discovery phase altogether and treat hosts as if they are online by using the switch
+    - '-sn' = complete network discovery without port scan
+    - '-Pn -sn' = use both -Pn & -sn to run without either a ping or port scan.
+
+<h4>FINGERPRINTING THE OS</h4>
+<b>Passively Gathering Traffic</b>
+    <b><i>- OS Fingerprinting</i></b>
+    <b><i>- PCAP (packet capture)</i></b>
+
+<b>Actively Sending Probes</b>
+
+<b>Key Elements Used to Determine the OS include</b>:
+    <b><i>(DF) Don't Fragment bit</i></b> - is the DF bit in the IPv4 header on or off?
+    <b><i>(WS) Window Size</i></b> - What does the OS use as a WS?
+    <b><i>(TTL) Time to Live</i></b> - what is TTL value set on outbound packet?
+
+<h3>07C - Analyze Output from Scans</h3>
+<h4>EXAMINING NETWORK TRAFFIC</h4>
+<b>Unknown Environment</b> - 
+
+<b>Partially Known Environment</b> - 
+
+<b>Known Environment</b> - 
+
+<b>Reporting with Nmap</b>
+    <i>-default</i> =  Interactive output
+    <i>'-oX'</i> =     XML output
+    <i>'-oG'</i> = Grepable output
+    <i>'-oN'</i>n = similar to interactive, but can save reults of Nmap to text file for later analysis
+
+<b>Interfacing with Zenmap</b>
+
+<h4>EVALUATING DNS AND WEB LOGS</h4>
+<b>Testing DNS</b>
+
+<b>Recognizing Normal Behavior</b>
+
+<b>Transferring Zone Information</b>
+    <b><i>A</i></b>
+    <b><i>AAAA</i></b>
+    <b><i>PTR</i></b>
+    <b><i>MX</i></b>
+    
+    ** DNS Zone Transfer is sometimes referred to an (AXFR) Authoritative Transfer
+
+<b>Poisoning the Cache</b>
+
+<h4>EXPOSING VULNERABLE WEB SERVERS</h4>
+Burp Suite
+
+<h3>Lab 07: Using Web Scanners</h3>
 
 <h2>Lesson 08: </h2>
 <h3>08A - </h3>
 <h3>08B - </h3>
 <h3>08C - </h3>
 
-<h3>Lab 08:</h3>
+<h3>Lab 08: Understanding Nmap Common Usage</h3>
 
 
 </pre>
