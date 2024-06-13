@@ -7,23 +7,130 @@
 </head>
 <body>
 <pre>
-<h1>CTEC 200 Network Defense wk03:  Lessons 06 - ; 07 - ; 08 - </h1>
-<h2>Lesson 06: </h2>
-<h3>06A </h3>
-<h3>06B </h3>
-<h3>06C </h3>
+<h1>CTEC 200 Network Defense wk03:  Lessons 06 - Scanning Logical Vulnerabilities; 07 - ; 08 - </h1>
+<h2>Lesson 06: Scanning Logical Vulnerabilities</h2>
+<h3>06A - Scan Identified Targets</h3>
+<h4>RECOGNIZING THE DIFFERENT TYPES OF SCANS</h4>
+<b>Discovering Network Hosts</b>
+
+<b>Scanning Ports</b>
+    <b>Port Scanning</b>
+
+<b>Fully Connecting with the Target</b>
+
+<b>Operating in Stealth Mode</b>
+    <i><b>- TCP SYN scan</b></i> - half-open scan; original stealth scan.
+    <i><b>- FIN scan</b></i> - sends packet with only FIN flag set
+    <i><b>- NULL scan</b></i> - packet sent with NO flags
+    <i><b>- XMAS Tree Scan</b></i> - send FIN, URG, and PSH flags
+
+<h4>ASSESSING VULNERABLE WEB APPLICATIONS</h4>
+<b>Crawling Web Applications</b>
+    <i><b>- Credentialed scan</b></i>
+    <i><b>- Non-credentialed scan</b></i> -- fewer permissions; finds missing patches & updates
+
+<b>Examining API Requests</b> - look for exposed authorization tokens / non-encrypted key information
+
+<h4>AUTOMATING VULNERABILITY SCANNING</h4>
+<b>SAST (Static Application Security Testing)</b>
+
+<b>DAST (Dynamic Application Security Testing)</b>
+
+<b>SCAP (Security Content Automation Protocol)</b>
+
+<h3>06B - Evaluate Network Traffic</h3>
+<h4>SNIFFING USING WIRESHARK</h4>
+<b>SPAN (Switched Port Analysis)</b>
+
+<b>Discovering Network Hosts</b>
+    <i><b>NetBIOS name service (NBNS)</b></i>
+
+    <i><b>AD (Active Directory)</b></i>
+
+    <i><b>CName (Canonical Name)</b></i>
+
+    <i><b>DHCP (Dynamic Host Configuration Protocol)</b></i>
+
+    <i><b>Client Identifier (MAC address)</b></i>
+
+<h4>SCANNING WITH NESSUS</h4>
+<b>Nessus</b> - 
+
+<b>Testing for Network Segmentation</b> 
+
+<b>ARP (Address Resolution Protocol)</b> - 
+
+<h4>GATHERING ARP TRAFFIC</h4> 
+<b>ARP Poisoning</b>
+
+<i><b>Nessus</b></i>
+<i><b>'Nmap -PR -sn' + target</b></i>: -PR = ARP ping; -sn = disable Port scan
+<i><b>Arping</b></i>
+
+<h3>06C Uncover Wireless Assets</h3>
+<h4>WAR DRIVING OPEN ACCESS POINTS</h4>
+<b>WAP (Wireless Access Point)</b>
+
+<b>War Driving</b>
+
+<b>Mapping WAP using 'WiGLE'</b>
+    WiGLE is an OSINT tool
+
+<h4>AMPLIFYING THE WI-FI SIGNAL</h4>
+<b>SNR (Signal-to-Noise Ratio)</b>
+
+<b>dBi (decibels per isotropic)</b>
+
 <h3>Lab 06:</h3>
 
-<h2>Lesson 07: </h2>
-<h3>07A </h3>
-<h3>07B </h3>
-<h3>07C </h3>
+<h2>Lesson 07: Analyzing Scanning Results</h2>
+<h3>07A - Discover Nmap and NSE</h3>
+<h4>COVERING THE BASICS</h4>
+<b>Timing and Performance Considerations</b>
+    <i><b>T0 and T1</b></i> - best option but slow
+    <i><b>T2</b></i>        - slower scan to preserve bandwidth
+    <i><b>T3</b></i>        - default and most stable option
+    <i><b>T4</b></i>        - fast and stable
+    <i><b>T5</b></i>        - fast, but unstable
+
+<b>Rate Limiting</b>
+
+<b>Using TCP or UDP</b>
+
+<b>TCP</b>:  
+    <i><b>- </b></i>
+    <i><b>- </b></i>
+    <i><b>- </b></i>
+
+<b>UDP</b>:
+    <i><b>- </b></i>
+    <i><b>- </b></i>
+    <i><b>- </b></i>
+<h4>SCRIPTING WITH NMAP</h4>
+<b>NSE (Nmap Scripting Engine)</b>
+    <i><b>- Malware</b></i>
+
+    <i><b>- Discovery</b></i>
+
+    <i><b>- Vulnerabilities</b></i>
+
+<h3>07B - Enumerate Network Hosts</h3>
+<h4>DETECTING INTERESTING HOSTS</h4>
+<b>Ping Scans</b>
+
+<b>TCP Scans</b>
+
+<b>OS Footprinting</b>
+
+
+<h3>07C - </h3>
 <h3>Lab 07:</h3>
 
 <h2>Lesson 08: </h2>
-<h3>08A </h3>
-<h3>08B </h3>
-<h3>08C </h3>
+<h3>08A - </h3>
+<h3>08B - </h3>
+<h3>08C - </h3>
+
 <h3>Lab 08:</h3>
 
 
