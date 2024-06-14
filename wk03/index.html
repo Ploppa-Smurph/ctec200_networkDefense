@@ -194,10 +194,122 @@ Burp Suite
 
 <h3>Lab 07: Using Web Scanners</h3>
 
-<h2>Lesson 08: </h2>
-<h3>08A - </h3>
-<h3>08B - </h3>
-<h3>08C - </h3>
+<h2>Lesson 08: Avoiding Detection and Covering Tracks</h2>
+<h3>08A - Evade Detection</h3>
+<h4>FLYING UNDER THE RADAR</h4>
+<b>Nmap Stealth Options</b>
+    <b><i>-sF</i></b> - sends TCP FIN to bypass non-stateful firewall
+    <b><i>-f</i></b>  - split packet into 8-byte fragments to evade packet filtering firewalls and IDS
+    <b><i>--randomize-hosts</i></b> - option will randomize order of hosts being scanned
+
+<b>Spoofing the Device</b>   
+
+<b>Using a Decoy</b>
+
+<b>Reporting a Fake IP Address</b>
+
+<b>Advertising a Fake MAC Address</b>
+
+<b>Modifying a Port Number</b>
+
+<b>Slowing the Scans</b>
+    <b>NAC (Network Access Control)</b>
+
+<h4>BYPASSING NAC</h4>
+<b>On-path Attack</b>
+
+<b>LoTL (Living off the Land)</b>
+
+<h4>LIVING OFF THE LAND</h4>
+<b>Fileless Malware</b>
+
+<b>PowerShell (PS)</b>
+
+<b>WMI (Windows Management Instrumentation)</b>
+
+<b>VBScript (Visual Basic Script)</b>
+
+<b>Mimikatz</b>
+
+<b>The Attack</b>:
+    <i>1) Send phishing email with attached Word doc that contains a 'macro'</i>
+    <i>2) Victim accepts and opens document</i>
+    <i>3) Macro in Doc file activates VBScript which can execute PowerShell task to complete additional task, such as:</i>
+        <i>- Activate WMI to move through system</i>
+        <i>- Use Mimikatz to dump credentials</i>
+        <i>- Download and install Metasploit</i>
+
+** Must use 'Behavioral-based' and 'Monitoring' strategies to combat LoTL attacks **
+
+<h4>COVERING YOUR TRACKS</h4>
+
+<h4>TIDYING LOGS AND ENTRIES</h4>
+<b>Cleaning Log Entries</b>
+
+<b>Removing Specific Entries</b>
+
+<b>Changing Log Entries</b>
+
+<b>Modifying Timestamps</b>
+
+<h4>ERASING OR SHREDDING EVIDENCE</h4>
+<b>Removing the History</b>
+
+<b>Shredding Files</b>
+
+<h3>08B - Use Steganography to Hide and Conceal</h3>
+<h4>USING STANDARD STEGO TOOLS</h4>
+<b>Discovering Steghide</b>
+    <b><i>Steghide</i></b> - open-source tool used to conceal payload in image or audio files
+
+    <b><i>Steghide UI</i></b>
+
+<b>Disguising with OpenStego</b>
+    <b><i>Generate Watermark</i></b>
+
+<h4>MASKING USING ALTERNATE METHODS</h4>
+<b>Concealing with Whitespace</b>
+
+<b>Snow</b> - CLI steganography tool
+    <b><i>Messgae</i></b>
+    <b><i>Password</i></b>
+    <b><i>Text File</i></b>
+    <b><i>Output File</i></b>
+
+<h4>SYNTHESIZING IMAGES</h4>
+<b>Obscuring Text with Coagula</b>
+
+<b>Reveal with Audacity or Sonic Visualizer</b>
+
+<b>Sonic Visualizer</b> - tool that can distill hidden text
+
+<h3>08C - Establish a Covert Channel</h3>
+<h4>PROVIDING REMOTE ACCESS</h4>
+<b>Data Exfiltration</b> - 
+
+<h4>USING A SECURE SHELL</h4> - 
+
+<h4>HACKING WITH NETCAT AND NCAT</h4>
+<b>Introducing Netcat</b> - cli utli that can read / write TCP or UDP network connections
+    <b><i>-l </i></b> = listen mode
+    <b><i>-L </i></b> = listen harder mode
+    <b><i>-p </i></b> = specifies port 
+    <b><i>-u </i></b> = UDP mode (default is TCP)
+    <b><i>-e </i></b> = specifies program to execute when connection is made
+
+<b>Evolving with Ncat</b>
+
+<h4>MANAGING REMOTELY USING WINRM AND PSEXEC</h4>
+<b>Providing Remote Management with WinRM</b>
+
+<b>Managing Remotely Using PSExec</b>
+<b>PSExec</b> 
+
+<h4>USING A PROXY</h4>
+<b>SOCKS (Socket Secure)</b>
+
+<b>ProxyChains4</b>
+    <b>TOR (The Onion Router)</b>
 
 <h3>Lab 08: Understanding Nmap Common Usage</h3>
 
