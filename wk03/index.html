@@ -82,7 +82,10 @@
 <b>dBi (decibels per isotropic)</b>
 
 <h3>Lab 06: Exploring OpenVAS</h3> (Vulnerability Assessment)
-    <b>Perform Active Reconnaissance</b>
+    <b>Perform Active Reconnaissance</b> - using OpenVAS
+    - used OpenVAS (Greenbone Network OpenVAS) to scan VM LAMP target (vm ip: 10.1.16.12)
+    - viewed reports and looked at 'TCP Timestamps' (a Low Security vulnerabilty pointed out in this lab)
+        -- OpenVAS reports includes information about vulnerabilities and mitigation techniques
 
 
 
@@ -195,7 +198,21 @@
 <h4>EXPOSING VULNERABLE WEB SERVERS</h4>
 Burp Suite
 
-<h3>Lab 07: Using Web Scanners</h3>
+<h3>Lab 07: Using Web Scanners</h3> - using various 'web scanners' used in pentesting
+<b>skipfish</b> - recon tool for web apps; creates interactive sitemap by crawling the site using dictionary based probes 
+
+<b>wpscan</b> - designed to scan WordPress sites; can find security issues in WordPress
+
+<b>whatweb</b> - ID web technologies used on particular sites; returns version #, email addresses, web modules, account IDs, and SQL errors
+
+<b>sqlmap</b> - SQL injection vulnerability assessment tool
+
+<b>Nikto</b> - comprehensive tool which test web servers for 1000's of dangerous programs, files, vulnerabilities, and server configuration errors
+    # <i>nikto -h 10.1.16.12</i>
+    -- can output results to: html, xml, cvs, and txt
+
+<b>Dirb</b> - crawls web servers looking for 'web objects'. uses dictionary based attack and dictionaries can be customized
+    # <i>dirb http://10.1.16.12</i>
 
 <h2>Lesson 08: Avoiding Detection and Covering Tracks</h2>
 <h3>08A - Evade Detection</h3>
@@ -314,9 +331,38 @@ Burp Suite
 <b>ProxyChains4</b>
     <b>TOR (The Onion Router)</b>
 
-<h3>Lab 08: Understanding Nmap Common Usage</h3>
+<h3>Lab 08: Understanding Nmap Common Usage</h3> - network scanner used for security and auditing
+    - nmap uses raw network packets to determine what hosts are on a network and the OS and services running on each host
+    -- by default nmap uses 'full TCP handshake' for scan
 
+<b>-sP</b> - ping sweep
+    # <i>nmap -sP 10.1.16.0/24</i>
 
+<b>-p-</b> - all ports
+    # <i>nmap -p- 10.1.16.12</i> -- scans for all open ports on server
+
+<b>-O</b> - looks for OS
+    # <i>nmap -p 80 -sV -O 10.1.16.12 </i> -- returns version information about the Apache httpd and guesses at OS
+
+<b>-sT</b> - TCP connect scan
+    # <i>nmap -sT 10.1.16.0/24</i> - 
+
+<b>-sS</b> - sends SYN packet, but does not complete the TCP handshake
+    # <i>nmap -sS 10.1.16.0/24</i>
+
+<b>-sU</b> - UDP scan
+    # <i>nmap -sU 10.1.16.1</i>  - performs a UDP scan; UDP scans can take longer to run (use '-Pn' to scan 'Port Only' and skip host discovery)
+
+<b>-A</b> - help avoid firewall detection and perform OS, version service, vulnerability, and traceroute all in one option
+    # <i>nmap -A 10.1.16.1</i>
+
+<b>--script=banner</b>
+    # <i>nmap --script=banner 10.1.16.1</i>
+
+Output Options: 
+    <b><i>-oN</i></b> - normal text
+    <b><i>-oX</i></b> - XML file
+    <b><i>-oG</i></b> - Grepable text
 </pre>
 </body>
 </html>
